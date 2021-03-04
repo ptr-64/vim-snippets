@@ -18,7 +18,7 @@ def create_table(snip):
 
 	snip.buffer[snip.line] = ''
 
-	final_str = old_spacing + "\\begin{tabular}{|" + "|".join(['$' + str(i + 1) for i in range(cols)]) + "|}\n"
+	final_str = old_spacing + "\\begin{tabulary}{\textwidth}{|" + "|".join(['$' + str(i + 1) for i in range(cols)]) + "|}\n"
 
 	for i in range(rows):
 		final_str += old_spacing + '\t'
@@ -26,7 +26,7 @@ def create_table(snip):
 
 		final_str += " \\\\\\\n"
 
-	final_str += old_spacing + "\\end{tabular}\n$0"
+	final_str += old_spacing + "\\end{tabulary}\n$0"
 
 	snip.expand_anon(final_str)
 
