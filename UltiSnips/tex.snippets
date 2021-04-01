@@ -18,7 +18,7 @@ def create_table(snip):
 
 	snip.buffer[snip.line] = ''
 
-	final_str = old_spacing + "\\begin{tabulary}{\textwidth}{|" + "|".join(['$' + str(i + 1) for i in range(cols)]) + "|}\n"
+	final_str = old_spacing + "\\begin{tabulary}{\\textwidth}{|" + "|".join(['$' + str(i + 2) for i in range(cols)]) + "|}\n"
 
 	for i in range(rows):
 		final_str += old_spacing + '\t'
@@ -98,7 +98,7 @@ endsnippet
 
 snippet item "Itemize" b
 \begin{itemize}
-	\item $0
+	\item $1
 \end{itemize}
 endsnippet
 
